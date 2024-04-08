@@ -62,9 +62,9 @@
             // bgxLot
             // 
             this.bgxLot.Controls.Add(this.lstPurchases);
-            this.bgxLot.Location = new System.Drawing.Point(422, 12);
+            this.bgxLot.Location = new System.Drawing.Point(422, 14);
             this.bgxLot.Name = "bgxLot";
-            this.bgxLot.Size = new System.Drawing.Size(378, 386);
+            this.bgxLot.Size = new System.Drawing.Size(378, 384);
             this.bgxLot.TabIndex = 2;
             this.bgxLot.TabStop = false;
             this.bgxLot.Text = "Lot";
@@ -228,6 +228,8 @@
             this.ClientSize = new System.Drawing.Size(813, 413);
             this.Controls.Add(this.pnlMain);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(829, 452);
+            this.MinimumSize = new System.Drawing.Size(829, 452);
             this.Name = "frmRegistrationLot";
             this.Text = "Lot Registration";
             this.pnlMain.ResumeLayout(false);

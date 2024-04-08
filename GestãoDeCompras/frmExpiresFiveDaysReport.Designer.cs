@@ -60,6 +60,8 @@
             this.ClientSize = new System.Drawing.Size(813, 413);
             this.Controls.Add(this.pnlMain);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(829, 452);
+            this.MinimumSize = new System.Drawing.Size(829, 452);
             this.Name = "frmExpiresFiveDaysReport";
             this.Text = "To expire in up to 5 day";
             this.pnlMain.ResumeLayout(false);

@@ -30,15 +30,15 @@ namespace OrderControl
 
         private void txtCodigo_KeyUp(object sender, KeyEventArgs e)
         {
-            List<Product> l = new List<Product>();
+            List<Product> products = new List<Product>();
             try
             {
-                l.Add(MockDatabase.FindProductById(Convert.ToInt64(txtCode.Text)));
-                lstProducts.DataSource = l;
+                products.Add(MockDatabase.FindProductById(Convert.ToInt64(txtCode.Text)));
+                lstProducts.DataSource = products;
             }
             catch (Exception)
             {
-                l.Clear();
+                products.Clear();
                 lstProducts.DataSource = MockDatabase.Products;
             }
         }
@@ -57,12 +57,12 @@ namespace OrderControl
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Purchase c = new Purchase();
-            c.PurchaseDate = dtpPurchase.Value.Date;
-            c.ExpirationDate = dtpExpiration.Value.Date;
-            c.Quantity = Convert.ToInt16(nudQuantity.Value);
-            c.Product = (Product)lstProducts.SelectedItem;
-            MockDatabase.Purchases.Add(c);
+            Purchase p = new Purchase();
+            p.PurchaseDate = dtpPurchase.Value.Date;
+            p.ExpirationDate = dtpExpiration.Value.Date;
+            p.Quantity = Convert.ToInt16(nudQuantity.Value);
+            p.Product = (Product)lstProducts.SelectedItem;
+            MockDatabase.Purchases.Add(p);
         }
     }
 }

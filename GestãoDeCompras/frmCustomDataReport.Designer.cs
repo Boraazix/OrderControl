@@ -181,7 +181,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 99);
             this.Controls.Add(this.pnlMain);
+            this.Location = new System.Drawing.Point(514, 138);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(514, 138);
             this.Name = "frmCustomDataReport";
             this.Text = "Custom Date Report";
             this.pnlMain.ResumeLayout(false);

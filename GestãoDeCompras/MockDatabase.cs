@@ -65,52 +65,52 @@ namespace OrderControl
         }
         public static List<Purchase> ExpiresOneDay()
         {
-            List<Purchase> c = new List<Purchase>();
-            foreach (Purchase c2 in MockDatabase.Purchases)
+            List<Purchase> p = new List<Purchase>();
+            foreach (Purchase pAux in Purchases)
             {
-                if (c2.ExpirationDate.Date <= DateTime.Now.Date.AddDays(1))
-                    c.Add(c2);
+                if (pAux.ExpirationDate.Date <= DateTime.Now.Date.AddDays(1))
+                    p.Add(pAux);
             }
-            return c;
+            return p;
         }
         public static List<Purchase> ExpiresFiveDays()
         {
-            List<Purchase> c = new List<Purchase>();
-            foreach (Purchase c2 in MockDatabase.Purchases)
+            List<Purchase> p = new List<Purchase>();
+            foreach (Purchase pAux in Purchases)
             {
-                if (c2.ExpirationDate.Date <= DateTime.Now.Date.AddDays(5))
-                    c.Add(c2);
+                if (pAux.ExpirationDate.Date <= DateTime.Now.Date.AddDays(5))
+                    p.Add(pAux);
             }
-            return c;
+            return p;
         }
         public static List<Purchase> 
             CustomPurchaseExpirationDate
-            (DateTime c0, DateTime cf, DateTime v0, DateTime vf, Boolean ckC, Boolean ckV)
+            (DateTime pI, DateTime pf, DateTime eI, DateTime ef, Boolean allP, Boolean allE)
         {
-            List<Purchase> c = new List<Purchase>();
-            foreach (Purchase c2 in MockDatabase.Purchases)
+            List<Purchase> p = new List<Purchase>();
+            foreach (Purchase pAux in Purchases)
             {
-                if(ckC && ckV)
+                if(allP && allE)
                 {
-                    c.Add(c2);
+                    p.Add(pAux);
                 }
-                else if (ckC && !ckV)
+                else if (allP && !allE)
                 {
-                    if (v0.Date <= c2.ExpirationDate.Date && c2.ExpirationDate.Date <= vf.Date)
-                        c.Add(c2);
+                    if (eI.Date <= pAux.ExpirationDate.Date && pAux.ExpirationDate.Date <= ef.Date)
+                        p.Add(pAux);
                 }
-                else if (!ckC && ckV)
+                else if (!allP && allE)
                 {
-                    if (c0.Date <= c2.PurchaseDate.Date && c2.PurchaseDate.Date <= cf.Date)
-                        c.Add(c2);
+                    if (pI.Date <= pAux.PurchaseDate.Date && pAux.PurchaseDate.Date <= pf.Date)
+                        p.Add(pAux);
                 }
-                else if (!ckC && !ckV)
+                else
                 {
-                    if(c0.Date <= c2.PurchaseDate.Date && c2.PurchaseDate.Date <= cf.Date && v0.Date <= c2.ExpirationDate.Date && c2.ExpirationDate.Date <= vf.Date)
-                        c.Add(c2);
+                    if(pI.Date <= pAux.PurchaseDate.Date && pAux.PurchaseDate.Date <= pf.Date && eI.Date <= pAux.ExpirationDate.Date && pAux.ExpirationDate.Date <= ef.Date)
+                        p.Add(pAux);
                 }
             }
-            return c;
+            return p;
         }
     }
 }

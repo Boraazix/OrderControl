@@ -35,7 +35,7 @@ namespace OrderControl
         }
         public override string ToString()
         {
-            return "["+Lot+"] "+Quantity+" x "+Product.Name+" = R$"+this.CalculateTotal();
+            return "["+Lot+"] "+Quantity+" x "+Product.Name+" = R$ "+this.CalculateTotal();
         }
     }
 }

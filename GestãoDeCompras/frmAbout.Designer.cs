@@ -187,6 +187,8 @@
             this.ClientSize = new System.Drawing.Size(468, 403);
             this.Controls.Add(this.pnlMain);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(484, 442);
+            this.MinimumSize = new System.Drawing.Size(484, 442);
             this.Name = "frmAbout";
             this.Text = "About";
             this.pnlMain.ResumeLayout(false);

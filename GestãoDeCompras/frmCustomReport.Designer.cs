@@ -60,6 +60,8 @@
             this.ClientSize = new System.Drawing.Size(813, 413);
             this.Controls.Add(this.pnlMain);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(829, 452);
+            this.MinimumSize = new System.Drawing.Size(829, 452);
             this.Name = "frmCustomReport";
             this.Text = "Custom Report";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VencimentoPersonalizado_FormClosed);

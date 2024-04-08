@@ -36,7 +36,7 @@ namespace OrderControl
         }
         public override string ToString()
         {
-            return "["+Code+"]"+Name+": R$ "+Price;
+            return "["+Code+"] "+Name+": R$ "+Price;
         }
     }
 }
